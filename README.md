@@ -14,7 +14,7 @@ The system continuously measures the power factor of an AC load, detects phase d
   - Required Reactive Power for correction
 - Automatic capacitor bank switching  
 - Live PF monitoring via Serial / LCD
-- 
+
 ## 📘 Project Overview
 
 Power factor is a key parameter in AC power systems. A low power factor increases current consumption and reduces system efficiency.  
@@ -134,13 +134,8 @@ Where:
 | Capacitor bank | Adds reactive power |
 | LCD / Serial monitor | For live output |
 
----
-
 ## 🔧 System Architecture
 ![System Architecture](https://github.com/thushanths09/Auto-Power-Factor-Correction-Systerm/blob/03c738cd714d8a71cffc1b7ee9c436206481ed61/System%20Architecture.png)
-
-
----
 
 ## ▶️ Usage
 
@@ -150,23 +145,10 @@ Where:
 4. Observe PF, voltage, current on serial/LCD  
 5. System automatically switches capacitors
 
----
-
-## 📊 Results
-
-- PF improved from lagging → near unity  
-- Automatic reaction under changing loads  
-- Stable & real-time power parameter output  
-
-(Add your results images here)
-
----
-
 ## 📸 Demo / Images
 
 Include system pictures, diagrams, screenshots here.
 
----
 
 
 
