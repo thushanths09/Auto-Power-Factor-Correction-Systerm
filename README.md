@@ -30,6 +30,8 @@ This project improves power factor by:
 
 ## 1️⃣ RMS Voltage & RMS Current
 
+RMS (Root Mean Square) values of voltage and current:
+
 $$
 V_{rms} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} v_i^2}
 $$
@@ -37,7 +39,6 @@ $$
 $$
 I_{rms} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} i_i^2}
 $$
-
 
 ## 2️⃣ Zero-Crossing Phase Angle Calculation
 
@@ -47,87 +48,79 @@ Let:
 - \( t_i \) = time of current zero crossing  
 - \( T = \frac{1}{f} \) = time period of AC supply
 
-\[
-\phi = 2\pi \cdot \frac{(t_i - t_v)}{T}
-\]
+Then the phase angle is:
 
-For lagging loads, current lags voltage → \( \phi > 0 \)
+$$
+\phi = 2 \pi \cdot \frac{(t_i - t_v)}{T}
+$$
 
----
+> For lagging loads, current lags voltage → \( \phi > 0 \)
 
-## 3️⃣ Instantaneous Power (for digital integration)
+## 3️⃣ Instantaneous Power
 
-\[
+Instantaneous power:
+
+$$
 p(t) = v(t) \cdot i(t)
-\]
+$$
 
 Average Real Power:
 
-\[
+$$
 P = \frac{1}{N} \sum_{i=1}^{N} p_i
-\]
-
----
+$$
 
 ## 4️⃣ Apparent Power
 
-\[
+$$
 S = V_{rms} \cdot I_{rms}
-\]
-
----
+$$
 
 ## 5️⃣ Reactive Power
 
-Using trigonometric identity:
+Using trigonometry:
 
-\[
+$$
 Q = \sqrt{S^2 - P^2}
-\]
+$$
 
-Or:
+Or equivalently:
 
-\[
+$$
 Q = V_{rms} I_{rms} \sin \phi
-\]
-
----
+$$
 
 ## 6️⃣ Power Factor
 
-\[
+$$
 PF = \cos \phi = \frac{P}{S}
-\]
+$$
 
 - PF < 1 → lagging (inductive)  
 - PF > 1 → leading (capacitive)  
-
----
 
 ## 7️⃣ Required Reactive Power for Correction
 
 To correct from \( PF_1 \) to \( PF_2 \):
 
-\[
-Q_c = P \left( \tan{\cos^{-1}(PF_1)} - \tan{\cos^{-1}(PF_2)} \right)
-\]
+$$
+Q_c = P \left( \tan(\cos^{-1}(PF_1)) - \tan(\cos^{-1}(PF_2)) \right)
+$$
 
-This gives the required **capacitive reactive power**.
-
----
+This is the required **capacitive reactive power**.
 
 ## 8️⃣ Required Capacitor Size
 
-\[
+The capacitor required to supply \( Q_c \):
+
+$$
 C = \frac{Q_c}{2 \pi f V^2}
-\]
+$$
 
 Where:  
 - \( C \) = capacitance (farads)  
-- \( f \) = frequency (50/60 Hz)  
-- \( V \) = RMS voltage  
-
----
+- \( f \) = AC frequency (Hz)  
+- \( V \) = RMS voltage
 
 ## 🛠️ Hardware Components
 
