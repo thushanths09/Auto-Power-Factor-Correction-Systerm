@@ -39,7 +39,7 @@ Below are all the electrical formulas implemented in the project.
 ---
 
 ## 1️⃣ RMS Voltage & RMS Current
-
+$$
 \[
 V_{rms} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} v_i^2}
 \]
@@ -47,7 +47,7 @@ V_{rms} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} v_i^2}
 \[
 I_{rms} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} i_i^2}
 \]
-
+$$
 ---
 
 ## 2️⃣ Zero-Crossing Phase Angle Calculation
